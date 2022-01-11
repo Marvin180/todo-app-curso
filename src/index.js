@@ -1,8 +1,21 @@
-
-import { saludar } from './js/componentes.js';
 import "./css/styles.css";
 
+import { Todo, TodoList } from './classes'; //si no pongo nada luedo de /classes/ busca un index por defecto
+import { crearTodoHTML } from "./js/componentes";
 
-const nombre = "Marvin";
 
-saludar(nombre);
+export const todoList =  new TodoList();
+// console.log(todoList.todos);
+// todoList.todos.forEach(crearTodoHTML); otra sintaxis
+todoList.todos.forEach(todo => crearTodoHTML( todo ));
+
+// todoList.todos[0].imprimir();
+// const tarea = new Todo("Aprender js!!");
+
+
+// todoList.nuevoTodo(tarea);
+
+// console.log(todoList);
+
+// crearTodoHTML( tarea );
+
